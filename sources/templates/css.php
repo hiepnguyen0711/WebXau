@@ -58,7 +58,7 @@
   // Hàm khởi tạo Lenis
   function initLenis() {
     lenis = new Lenis({
-      duration: 6.5, // Thời gian cuộn mượt
+      duration: 1.1, // Thời gian cuộn mượt
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing mượt mà
       smoothWheel: true, // Kích hoạt cuộn mượt với chuột
       smoothTouch: false, // Không mượt trên cảm ứng

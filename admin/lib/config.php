@@ -19,13 +19,7 @@ $config = array(
             "name"  => "Tiếng việt",
             "image" => "templates/images/icon_vn.webp",
             "price" => "VND"
-        ),
-        '1' => array(
-            "code"  => "us",
-            "name"  => "English",
-            "image" => "templates/images/icon_vn.webp",
-            "price" => "VND"
-        ),
+        )
         
     ),
     "product" => array(
@@ -56,5 +50,5 @@ $config = array(
     )
 );
 
-define("URLPATH", "http://" . $_SERVER["SERVER_NAME"] . "/thang4_2024/TN-VANCHUYEN-SCAEXPRESS_2/");
-define("urladmin", "http://" . $_SERVER["SERVER_NAME"] . "/thang4_2024/TN-VANCHUYEN-SCAEXPRESS_2/admin/");
+define("URLPATH", "http://" . $_SERVER["SERVER_NAME"] . "/2025/thang_1/WebXau/");
+define("urladmin", "http://" . $_SERVER["SERVER_NAME"] . "/2025/thang_1/WebXau/admin/");

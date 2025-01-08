@@ -60,7 +60,7 @@ $url_page = getCurrentPageURL();
     if ($source != 'gio-hang') {
     ?>
         <!-- Menu mobi start -->
-        <?php include _source . "module/menu-mobile.php"; ?>
+        <?php //include _source . "module/menu-mobile.php"; ?>
         <!-- Menu mobile end -->
         <?php include _source . "_header.php"; ?>
     <?php } ?>

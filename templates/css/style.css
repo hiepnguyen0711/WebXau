@@ -1702,3 +1702,8 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+
+.btn-dang-ky-uu-dai {
+  background: transparent !important;
+}
