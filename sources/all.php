@@ -251,3 +251,43 @@ if (isset($_POST['gui_thong_tin_khieu_nai'])) {
         $thongbao_url       = URLLANG;
     }
 }
+
+
+if (isset($_POST['dang_ky_uu_dai'])) {
+    if ($_POST['pnvn_token'] == $_SESSION['token']) {
+        $ho_ten = validate_content($d->clear(addslashes($_POST['ho_ten'])));
+        $dien_thoai = validate_content($d->clear(addslashes($_POST['dien_thoai'])));
+        $dia_chi = validate_content($d->clear(addslashes($_POST['dia_chi'])));
+        $chuong_trinh_km = isset($_POST['chuong_trinh_km']) ? $_POST['chuong_trinh_km'] : []; // Mảng checkbox
+
+        // Xử lý danh sách checkbox
+        $chuong_trinh_km_str = implode(', ', $chuong_trinh_km); // Nối các giá trị thành chuỗi
+
+        $data = [
+            "ho_ten" => $ho_ten,
+            "sdt" => $dien_thoai,
+            "dia_chi" => $dia_chi,
+            "chuong_trinh_km" => $chuong_trinh_km_str,
+        ];
+
+        $d->reset();
+        $d->setTable('#_lienhe');
+        if ($d->insert($data)) {
+            $thongbao_tt = $d->getTxt(15);
+            $thongbao_icon = 'success';
+            $thongbao_content = $d->getTxt(16);
+            $thongbao_url = URLLANG;
+            token();
+        } else {
+            $thongbao_tt = $d->getTxt(17);
+            $thongbao_icon = 'error';
+            $thongbao_content = $d->getTxt(17);
+            $thongbao_url = URLLANG;
+        }
+    } else {
+        $thongbao_tt = $d->getTxt(17);
+        $thongbao_icon = 'error';
+        $thongbao_content = $d->getTxt(17);
+        $thongbao_url = URLLANG;
+    }
+}

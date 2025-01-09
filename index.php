@@ -62,7 +62,7 @@ $url_page = getCurrentPageURL();
         <!-- Menu mobi start -->
         <?php //include _source . "module/menu-mobile.php"; ?>
         <!-- Menu mobile end -->
-        <?php include _source . "_header.php"; ?>
+        <?php // include _source . "_header.php"; ?>
     <?php } ?>
     <?php include _source . "module/slider.php"; ?>
     <div class="wrapper <?php if ($com != '') echo 'wrapper-detail'; ?>">
@@ -73,7 +73,7 @@ $url_page = getCurrentPageURL();
     <?php
     if ($source != 'gio-hang') {
     ?>
-        <?php include _source . "_footer.php"; ?>
+        <?php //include _source . "_footer.php"; ?>
         <?php include _source . "module/hotrotructuyen.php" ?>
     <?php } ?>
     <?php //include _source . "module/phone.php"; 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 08, 2025 lúc 11:12 AM
+-- Thời gian đã tạo: Th1 09, 2025 lúc 03:36 AM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 7.4.33
 
@@ -57,6 +57,59 @@ CREATE TABLE `cf_parent` (
   `ten` text NOT NULL,
   `type` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `cf_parent`
+--
+
+INSERT INTO `cf_parent` (`id`, `ten`, `type`) VALUES
+(1077, 'hình header', 1),
+(1078, 'nút mua ngay trên header', 1),
+(1079, 'Banner dưới header', 1),
+(1080, 'Banner thứ 2', 1),
+(1081, 'hình 1 (dưới banner thứ 2)', 1),
+(1082, 'hình 2 (dưới banner thứ 2)	', 1),
+(1083, 'hình 3 (dưới banner thứ 2)	', 1),
+(1084, 'hình 4 (dưới banner thứ 2)	', 1),
+(1085, 'hình 5 (dưới banner thứ 2)	', 1),
+(1086, 'title banner 2', 1),
+(1087, 'Banner 3', 1),
+(1088, 'Banner 4', 1),
+(1089, 'Banner 5', 1),
+(1090, 'video 1', 0),
+(1091, 'video 2', 0),
+(1092, 'video 3', 0),
+(1093, 'video 4', 0),
+(1094, 'Banner 6', 1),
+(1095, 'title banner 6', 1),
+(1096, 'video', 0),
+(1097, 'Banner 7', 1),
+(1098, 'Vòng sáng banner 7', 1),
+(1099, 'Banner 8', 1),
+(1100, 'video', 0),
+(1101, 'Banner 9', 1),
+(1102, 'mũi tên chỉa chỉa', 1),
+(1103, 'Banner 10', 1),
+(1104, 'Banner 11', 1),
+(1105, 'title banner 11', 1),
+(1106, 'banner 12', 1),
+(1107, 'banner đăng ký nhận ưu đãi', 1),
+(1108, 'nút nhận ngay', 1),
+(1109, 'mấy cái chương trình khuyến mãi', 1),
+(1110, 'Mua 1 serum: 3800k giảm còn 999k + Freeship', 0),
+(1111, 'Mua 1 serum: 3800k giảm còn 999k + Freeship', 0),
+(1112, 'Mua 1 serum: 3800k giảm còn 999k + Freeship', 0),
+(1113, 'Mua 1 serum: 3800k giảm còn 999k + Freeship', 0),
+(1114, 'Mua 1 serum: 3800k giảm còn 999k + Freeship', 0),
+(1115, 'Các bình luận ảo', 1),
+(1116, 'Nhã Phạm', 0),
+(1117, 'Phương Thúy', 0),
+(1118, 'Hạ Nam', 0),
+(1119, 'Ngọc Trinh', 0),
+(1120, 'Diễm', 0),
+(1121, 'Anna Lê', 0),
+(1122, 'tên công ty footer', 1),
+(1123, 'Logo footer', 1);
 
 -- --------------------------------------------------------
 
@@ -467,6 +520,42 @@ CREATE TABLE `db_category_noidung` (
   `mo_ta` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `db_category_noidung`
+--
+
+INSERT INTO `db_category_noidung` (`id`, `id_code`, `lang`, `ten`, `hinh_anh`, `link`, `nofollow`, `target`, `heading`, `noi_dung`, `hien_thi`, `tieu_de`, `mo_ta`) VALUES
+(165, 1077, 'vi', 'hình header', 'lading-page/untitled-1-recovered_01-20240516074532-sodb-.jpg', '', 0, 0, 'div', '', 1, '', ''),
+(166, 1078, 'vi', 'nút mua ngay trên header', 'lading-page/group-11-20240516014354-73bkn.png', '', 0, 0, 'div', '', 1, '', ''),
+(167, 1079, 'vi', 'Banner dưới header', 'lading-page/untitled-1-recovered_03-20240517021211-ikncg.jpg', '', 0, 0, 'div', '', 1, '', ''),
+(168, 1080, 'vi', 'Banner thứ 2', 'lading-page/dr-xxsm1gr20240516014255.jpg', '', 0, 0, 'div', '', 1, '', ''),
+(169, 1081, 'vi', 'hình 1 (dưới banner thứ 2)', 'lading-page/rlpdng1arl20240516014255.png', '', 0, 0, 'div', '', 1, '', ''),
+(170, 1082, 'vi', 'hình 2 (dưới banner thứ 2)	', 'lading-page/408f8zojk220240516014255.png', '', 0, 0, 'div', '', 1, '', ''),
+(171, 1083, 'vi', 'hình 3 (dưới banner thứ 2)	', 'lading-page/group-6-20240517021512-zv7ym.png', '', 0, 0, 'div', '', 1, '', ''),
+(172, 1084, 'vi', 'hình 4 (dưới banner thứ 2)	', 'lading-page/group-7-copy-20240516014354-zlnmp.png', '', 0, 0, 'div', '', 1, '', ''),
+(173, 1085, 'vi', 'hình 5 (dưới banner thứ 2)	', 'lading-page/vadxazk0vt20240516014255.png', '', 0, 0, 'div', '', 1, '', ''),
+(174, 1086, 'vi', 'title banner 2', 'lading-page/4yzjvcnb5j20240516014252.png', '', 0, 0, 'div', '', 1, '', ''),
+(175, 1087, 'vi', 'Banner 3', 'lading-page/jw3tvtbjcz20240516014256.jpg', '', 0, 0, 'div', '', 1, '', ''),
+(176, 1088, 'vi', 'Banner 4', 'lading-page/s3m0jl5wtw20240517013730.jpg', '', 0, 0, 'div', '', 1, '', ''),
+(177, 1089, 'vi', 'Banner 5', 'lading-page/untitled-1_02-20240516044810-um8da.jpg', '', 0, 0, 'div', '', 1, '', ''),
+(178, 1094, 'vi', 'Banner 6', 'lading-page/untitled-1_03-20240516063416-yorrp.jpg', '', 0, 0, 'div', '', 1, '', ''),
+(179, 1095, 'vi', 'title banner 6', 'lading-page/group-4-20240516062459-3ywty.png', '', 0, 0, 'div', '', 1, '', ''),
+(180, 1097, 'vi', 'Banner 7', 'lading-page/iovzdb2hpu20240517013729.jpg', '', 0, 0, 'div', '', 1, '', ''),
+(181, 1098, 'vi', 'Vòng sáng banner 7', 'lading-page/f16947ca6a616349ed63771804d16250-20240516073724-0eu5o.gif', '', 0, 0, 'div', '', 1, '', ''),
+(182, 1099, 'vi', 'Banner 8', 'lading-page/untitled-1_05-20240516180917-dq6ey.jpg', '', 0, 0, 'div', '', 1, '', ''),
+(183, 1101, 'vi', 'Banner 9', 'lading-page/artboard-3-20240516101053-zhqe7.jpg', '', 0, 0, 'div', '', 1, '', ''),
+(184, 1102, 'vi', 'mũi tên chỉa chỉa', 'lading-page/arrow-gif-20240516101333-esmx6.gif', '', 0, 0, 'div', '', 1, '', ''),
+(185, 1103, 'vi', 'Banner 10', 'lading-page/artboard-4-20240516181542-t-fzn.png', '', 0, 0, 'div', '', 1, '', ''),
+(186, 1104, 'vi', 'Banner 11', 'lading-page/a0c5731c0e0daa53f31c-20240812071449-hcnaq.jpg', '', 0, 0, 'div', '', 1, '', ''),
+(187, 1105, 'vi', 'title banner 11', 'lading-page/group-1-20240516091118-hln4n.png', '', 0, 0, 'div', '', 1, '', ''),
+(188, 1106, 'vi', 'banner 12', 'lading-page/0ddcee0a931b37456e0a-20240812071501-bt0cv.jpg', '', 0, 0, 'div', '', 1, '', ''),
+(189, 1107, 'vi', 'banner đăng ký nhận ưu đãi', 'lading-page/artboard-2-20240516084409-2dk-y.png', '', 0, 0, 'div', '', 1, '', ''),
+(190, 1108, 'vi', 'nút nhận ngay', 'lading-page/group-12-20240516083801-uadbp.png', '', 0, 0, 'div', '', 1, '', ''),
+(191, 1109, 'vi', 'mấy cái chương trình khuyến mãi', '', '', 0, 0, 'div', '', 1, '', ''),
+(192, 1115, 'vi', 'Các bình luận ảo', '', '', 0, 0, 'div', '', 1, '', ''),
+(193, 1122, 'vi', 'tên công ty footer', '', '', 0, 0, 'div', '<p>C&ocirc;ng Ty TNHH PhươngNamVina (Việt Nam)</p>\r\n\r\n<p>&copy; PNVN Inc</p>\r\n\r\n<p>Đại l&yacute; ủy quyền của C&ocirc;ng ty Phương Nam Vina</p>\r\n', 1, '', ''),
+(194, 1123, 'vi', 'Logo footer', 'lading-page/logo74.png', '', 0, 0, 'div', '', 1, '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -491,6 +580,29 @@ CREATE TABLE `db_content` (
   `ma_video` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `so_thu_tu` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `db_content`
+--
+
+INSERT INTO `db_content` (`id`, `id_loai`, `id_code`, `lang`, `ten`, `hinh_anh`, `link`, `chucvu`, `hien_thi`, `nofollow`, `target`, `heading`, `noi_dung`, `video`, `ma_video`, `so_thu_tu`) VALUES
+(383, 1109, 1114, 'vi', 'Mua 1 serum: 3800k giảm còn 999k + Freeship', '', '', '', 1, 0, 0, '', '', '', '', 5),
+(382, 1109, 1113, 'vi', 'Mua 1 serum: 3800k giảm còn 999k + Freeship', '', '', '', 1, 0, 0, '', '', '', '', 4),
+(381, 1109, 1112, 'vi', 'Mua 1 serum: 3800k giảm còn 999k + Freeship', '', '', '', 1, 0, 0, '', '', '', '', 3),
+(380, 1109, 1111, 'vi', 'Mua 1 serum: 3800k giảm còn 999k + Freeship', '', '', '', 1, 0, 0, '', '', '', '', 2),
+(379, 1109, 1110, 'vi', 'Mua 1 serum: 3800k giảm còn 999k + Freeship', '', '', '', 1, 0, 0, '', '', '', '', 1),
+(378, 1099, 1100, 'vi', 'video', '', '', '', 1, 0, 0, '', '', 'lading-page/video/videoplayback-20240516181047-pu7xl.mp4', '', 0),
+(377, 1094, 1096, 'vi', 'video', '', '', '', 1, 0, 0, '', '', 'lading-page/video/2-x5-site_experienc-benefit-pc-20240516015608-d7i52.mp4', '', 0),
+(376, 1089, 1093, 'vi', 'video 4', '', '', '', 1, 0, 0, '', '', 'lading-page/video/zd-20240516045502-dq7xp.mp4', '', 4),
+(375, 1089, 1092, 'vi', 'video 3', '', '', '', 1, 0, 0, '', '', 'lading-page/video/perf-boost-pc-20240516044950-0p6sd.mp4', '', 3),
+(374, 1089, 1091, 'vi', 'video 2', '', '', '', 1, 0, 0, '', '', 'lading-page/video/perf-lines-pc-1-20240516044950-nwubb.mp4', '', 2),
+(373, 1089, 1090, 'vi', 'video 1', '', '', '', 1, 0, 0, '', '', 'lading-page/video/perf-pore-pc-20240516044950-t7vh-.mp4', '', 1),
+(384, 1115, 1116, 'vi', 'Nhã Phạm', 'lading-page/layer-2-20240517014408-geve5.png', '', '', 1, 0, 0, '', '<p>D&ugrave;ng bộ n&agrave;y nh&agrave; Estee Lauder cả năm nay rồi, da l&uacute;c n&agrave;o cũng căng b&oacute;ng kh&ocirc;ng thấy xuất hiện nếp nhăn nữa, U40 m&agrave; ra đường ai cũng bảo trẻ như sinh vi&ecirc;n vậy</p>\r\n', '', '', 1),
+(385, 1115, 1117, 'vi', 'Phương Thúy', 'lading-page/layer-3-20240517014408-qetk2.png', '', '', 1, 0, 0, '', '<p>Mua tặng mẹ chồng 1 bộ m&agrave; b&agrave; mới d&ugrave;ng 2 h&ocirc;m th&iacute;ch qu&aacute; đi khoe cả x&oacute;m, giờ mấy c&ocirc; h&agrave;ng x&oacute;m cũng nhờ mua hộ lu&ocirc;n&nbsp;</p>\r\n', '', '', 2),
+(386, 1115, 1118, 'vi', 'Hạ Nam', 'lading-page/layer-4-20240517014408-odl-c.png', '', '', 1, 0, 0, '', '<p>Mới d&ugrave;ng được hơn tuần m&agrave; da căng b&oacute;ng mịn mượt, s&aacute;ng hơn hẳn. Serum v&agrave; kem đều thấm cực nhanh, thoa xong s&aacute;ng h&ocirc;m sau dậy thấy da kh&aacute;c hẳn rồi ấy</p>\r\n', '', '', 3),
+(387, 1115, 1119, 'vi', 'Ngọc Trinh', 'lading-page/layer-5-20240517014408-fjfqq.png', '', '', 1, 0, 0, '', '<p>Da sạm với bị nhăn kho&eacute; mắt nhiều mua bộ n&agrave;y n&agrave;y, chị t đang d&ugrave;ng ổn lắm đ&oacute;</p>\r\n', '', '', 4),
+(388, 1115, 1120, 'vi', 'Diễm', 'lading-page/layer-6-20240517014408-xgfev.png', '', '@Ngọc Trinh', 1, 0, 0, '', 'T đã quất hẳn 1 bộ trước khi m tag rồi vì giá đang rẻ quá trời =)))', '', '', 5),
+(389, 1115, 1121, 'vi', 'Anna Lê', 'lading-page/layer-1-20240517014408-kgxsh.png', '', '', 1, 0, 0, '', '<p>M&igrave;nh mới nhận về tay lu&ocirc;n n&egrave;, đ&oacute;ng g&oacute;i cẩn thận, check h&agrave;ng ch&iacute;nh h&atilde;ng y&ecirc;n t&acirc;m, m&agrave; mua đ&uacute;ng đợt sale gi&aacute; hời th&iacute;ch lắm lu&ocirc;n&nbsp;</p>\r\n', '', '', 6);
 
 -- --------------------------------------------------------
 
@@ -1488,8 +1600,25 @@ CREATE TABLE `db_lienhe` (
   `gio_dat_lich` varchar(128) DEFAULT NULL,
   `loai_lienhe` int(11) NOT NULL DEFAULT 0,
   `ma_van_don` varchar(512) DEFAULT NULL,
-  `loai_khieu_nai` varchar(512) DEFAULT NULL
+  `loai_khieu_nai` varchar(512) DEFAULT NULL,
+  `chuong_trinh_km` text DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `db_lienhe`
+--
+
+INSERT INTO `db_lienhe` (`id`, `ho_ten`, `email`, `sdt`, `dia_chi`, `soluong`, `ten_cong_ty`, `tieu_de`, `noi_dung`, `ngay`, `thoigian`, `ngay_hoi`, `tra_loi`, `ngay_traloi`, `nguoi_traloi`, `trang_thai`, `ngay_lienhe`, `so_khach`, `ngay_dat_lich`, `ngay_dat_lich_timestamp`, `gio_dat_lich`, `loai_lienhe`, `ma_van_don`, `loai_khieu_nai`, `chuong_trinh_km`) VALUES
+(48, 'hac', NULL, '0775655987', '12321312', '', NULL, NULL, NULL, '', '', '2025-01-09 02:03:56', NULL, 0, NULL, 1, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'Mua 1 serum: 3800k giảm còn 999k + Freeship, Mua 1 serum: 3800k giảm còn 999k + Freeship'),
+(49, 'hac', NULL, '0775655987', '12321312', '', NULL, NULL, NULL, '', '', '2025-01-09 02:03:56', NULL, 0, NULL, 1, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'Mua 1 serum: 3800k giảm còn 999k + Freeship, Mua 1 serum: 3800k giảm còn 999k + Freeship'),
+(50, 'hiep nguyen', NULL, '0772655888', '1232131', '', NULL, NULL, NULL, '', '', '2025-01-09 02:04:47', NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'Mua 1 serum: 3800k giảm còn 999k + Freeship, Mua 1 serum: 3800k giảm còn 999k + Freeship'),
+(51, 'hiep nguyen', NULL, '0772655888', '1232131', '', NULL, NULL, NULL, '', '', '2025-01-09 02:04:47', NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'Mua 1 serum: 3800k giảm còn 999k + Freeship, Mua 1 serum: 3800k giảm còn 999k + Freeship'),
+(52, 'test', NULL, '0779888666', '321312', '', NULL, NULL, NULL, '', '', '2025-01-09 02:07:52', NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'Mua 1 serum: 3800k giảm còn 999k + Freeship, Mua 1 serum: 3800k giảm còn 999k + Freeship'),
+(53, 'test', NULL, '0779888666', '321312', '', NULL, NULL, NULL, '', '', '2025-01-09 02:07:52', NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'Mua 1 serum: 3800k giảm còn 999k + Freeship, Mua 1 serum: 3800k giảm còn 999k + Freeship'),
+(54, 'hiep', NULL, '0798964545', '321321', '', NULL, NULL, NULL, '', '', '2025-01-09 02:09:44', NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'Mua 1 serum: 3800k giảm còn 999k + Freeship, Mua 1 serum: 3800k giảm còn 999k + Freeship'),
+(55, '321321', NULL, '0772655888', '12321', '', NULL, NULL, NULL, '', '', '2025-01-09 02:10:27', NULL, 0, NULL, 1, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'Mua 1 serum: 3800k giảm còn 999k + Freeship, Mua 1 serum: 3800k giảm còn 999k + Freeship'),
+(56, 'hiep', NULL, '0772655888', '7123132', '', NULL, NULL, NULL, '', '', '2025-01-09 02:11:10', NULL, 0, NULL, 1, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'Mua 1 serum: 3800k giảm còn 999k + Freeship'),
+(57, 'hac ne', NULL, '0775655987', '321321', '', NULL, NULL, NULL, '', '', '2025-01-09 02:35:27', NULL, 0, NULL, 1, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'Mua 1 serum: 3800k giảm còn 999k + Freeship, Mua 1 serum: 3800k giảm còn 999k + Freeship, Mua 1 serum: 3800k giảm còn 999k + Freeship, Mua 1 serum: 3800k giảm còn 999k + Freeship, Mua 1 serum: 3800k giảm còn 999k + Freeship');
 
 -- --------------------------------------------------------
 
@@ -1851,7 +1980,7 @@ CREATE TABLE `db_seo` (
 --
 
 INSERT INTO `db_seo` (`id`, `title`, `keyword`, `des`, `lang`) VALUES
-(1, 'SCA EXPRESS', 'SCA EXPRESS', 'SCA EXPRESS', 'vi'),
+(1, 'Web Xấu', 'Web Xấu', 'Web Xấu', 'vi'),
 (3, 'PHUONG NAM VINA COMPANY LIMITED', 'Keyword : PHUONG NAM VINA COMPANY LIMITED', 'Description : PHUONG NAM VINA COMPANY LIMITED', 'en'),
 (4, 'SCA EXPRESS', 'SCA EXPRESS', 'SCA EXPRESS', 'us'),
 (5, 'ĐỒNG HỒ NHẬT BẢN', 'ĐỒNG HỒ NHẬT BẢN', 'ĐỒNG HỒ NHẬT BẢN', 'kr');
@@ -2401,7 +2530,7 @@ CREATE TABLE `db_thongtin` (
 --
 
 INSERT INTO `db_thongtin` (`id`, `company`, `hotline`, `address`, `website`, `hinh_anh`, `twitter`, `facebook`, `linkedin`, `dien_thoai`, `giolamviec`, `zalo`, `email`, `coppy_right`, `map`, `messenger`, `toa_do`, `favicon`, `icon_share`, `youtube`, `pinterest`, `instagram`, `skype`, `telegram`, `whatsapp`, `code`, `lang`, `site_key`, `secret_key`, `lazada`, `shopee`, `tiktok`, `banner_share`, `zalo_qr`, `reddit`, `discord`) VALUES
-(1, 'Thịt lợn hầm lúp xúp Mr. Kiss', '0915101017', '190 Bạch Đằng, Phường 24, Q. Bình Thạnh, TP. HCM', 'www.phuongnamvina.com', '416506557301_favicon.jpg', '', 'https://www.facebook.com/facebook', '', '0965 526 564 ', '8:00 - 17:00 | Thứ 2 - Thứ 7', '0123456789', 'kinhdoanh@phuongnamvina.vn', 'Copyright 2023 © phuongnamvina ', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.314299788322!2d106.70094911521669!3d10.787222292314194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f19a134b355%3A0xb87a0562ca3d899!2sC\'est%20La%20Vie%20-%20NTMK!5e0!3m2!1svi!2s!4v1661049092928!5m2!1svi!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', '', '', 'luminouse/logo_svg.svg', 'luminouse/logo_svg.svg', '', 'Pinterest', 'Instagram', '', '', '', '421aa90e079fa326b6494f812ad13e79', 'vi', '6LfuP3ghAAAAAEoQKTka4Lxi4G0QvkPT605xm7BQ', '6LfuP3ghAAAAAIaMaA3sSND2gIMUa6s22T9aWqq3', 'lazada đâyyyyyyyyyyyyy', 'sóp pi đâyyyyyyyyyyyyyyyyy', '', 'screenshot.png', '', '', ''),
+(1, 'Thịt lợn hầm lúp xúp Mr. Kiss', '0915101017', '190 Bạch Đằng, Phường 24, Q. Bình Thạnh, TP. HCM', 'www.phuongnamvina.com', '416506557301_favicon.jpg', '', 'https://www.facebook.com/facebook', '', '0965 526 564 ', '8:00 - 17:00 | Thứ 2 - Thứ 7', '0123456789', 'kinhdoanh@phuongnamvina.vn', 'Copyright 2023 © phuongnamvina ', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.314299788322!2d106.70094911521669!3d10.787222292314194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f19a134b355%3A0xb87a0562ca3d899!2sC\'est%20La%20Vie%20-%20NTMK!5e0!3m2!1svi!2s!4v1661049092928!5m2!1svi!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', '', '', 'image_3.png', 'image_3.png', '', 'Pinterest', 'Instagram', '', '', '', '421aa90e079fa326b6494f812ad13e79', 'vi', '6LfuP3ghAAAAAEoQKTka4Lxi4G0QvkPT605xm7BQ', '6LfuP3ghAAAAAIaMaA3sSND2gIMUa6s22T9aWqq3', 'lazada đâyyyyyyyyyyyyy', 'sóp pi đâyyyyyyyyyyyyyyyyy', '', 'iphone-13-pro-localhost_1.png', '', '', ''),
 (3, 'FreshFish', '0123456789', '213 Chu Văn An', '', '', '', '', '', '', '8:00 - 17:00 - Thứ 2 - Thứ 7', '', '', 'Copyright © 2023 | Design Web: Phuong Nam Vina', '', '', '', 'logo.png', 'logo.png', '', '', '', '', '', '', '', 'hu', '6LdCGfckAAAAAFo5QM-D40wDE3wqurNPy_kk56Rq', '6LdCGfckAAAAAC8SOHszmQg7EhSsrhjkmjvuZsCx', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (4, 'Tinh Dầu - FT', '0912010117', '213 Chu Văn An, Phường 26, Quận Bình Thạnh', 'www.phuongnamvina.com', '', '', '', '', '0972 907 942', 'Từ thứ 2 - thứ 7 (7:30 - 16:30)', '', 'kinhdoanh@phuongnamvina.com', 'Copyright © 2023 | Design Web: Phuong Nam Vina', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.314299788322!2d106.70094911521669!3d10.787222292314194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f19a134b355%3A0xb87a0562ca3d899!2sC\'est%20La%20Vie%20-%20NTMK!5e0!3m2!1svi!2s!4v1661049092928!5m2!1svi!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', '', '', 'sca_express/logo.png', 'sca_express/logo.png', '', '', '', '', '', '', '', 'us', '6LfuP3ghAAAAAEoQKTka4Lxi4G0QvkPT605xm7BQ', '6LfuP3ghAAAAAIaMaA3sSND2gIMUa6s22T9aWqq3', '', '', '', 'screenshot.png', '', '', ''),
 (5, '돼지 족발 조림 Mr. Kiss', '1661-8482', '서울 용산구 청파로 247, 5층 (애전빌딩)', 'www.phuongnamvina.com', '', '', '', '', '', '', '', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.314299788322!2d106.70094911521669!3d10.787222292314194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f19a134b355%3A0xb87a0562ca3d899!2sC\'est%20La%20Vie%20-%20NTMK!5e0!3m2!1svi!2s!4v1661049092928!5m2!1svi!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', '', '', 'dong_ho_nhat_ban/favicon.png', 'dong_ho_nhat_ban/logo-bg.jpg', '', '', '', '', '', '', '', 'kr', '', '', '', '', '', 'nha_hang_han_quoc/screenshot.png', '', '', ''),
@@ -2494,7 +2623,7 @@ CREATE TABLE `db_user` (
 --
 
 INSERT INTO `db_user` (`id`, `token`, `user_hash`, `pass_hash`, `tai_khoan`, `email`, `ho_ten`, `dien_thoai`, `dia_chi`, `hinh_anh`, `ngay_sinh`, `gioi_tinh`, `quyen_han`, `hien_thi`, `ngay_tao`, `is_admin`, `parent`, `noi_dung`) VALUES
-(1, '83f054ba797e51b8ef8d2356ac1ad168', 'd033e22ae348aeb5660fc2140aec35850c4da997', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'admin', '', 'Admin', '', '', 'sca_express/vietnam-flag.png', '', 1, 4, 1, 1473306606, 1, 0, '');
+(1, '2f955f3855a3ae8d2b54c6a0a2ba92bd', 'd033e22ae348aeb5660fc2140aec35850c4da997', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'admin', '', 'Admin', '', '', 'image_3.png', '', 1, 4, 1, 1473306606, 1, 0, '');
 
 -- --------------------------------------------------------
 
@@ -14075,7 +14204,7 @@ ALTER TABLE `cf_code`
 -- AUTO_INCREMENT cho bảng `cf_parent`
 --
 ALTER TABLE `cf_parent`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1076;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1124;
 
 --
 -- AUTO_INCREMENT cho bảng `country`
@@ -14111,13 +14240,13 @@ ALTER TABLE `db_category`
 -- AUTO_INCREMENT cho bảng `db_category_noidung`
 --
 ALTER TABLE `db_category_noidung`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=163;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=195;
 
 --
 -- AUTO_INCREMENT cho bảng `db_content`
 --
 ALTER TABLE `db_content`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=373;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=390;
 
 --
 -- AUTO_INCREMENT cho bảng `db_dathang`
@@ -14183,7 +14312,7 @@ ALTER TABLE `db_khuyenmai_ls`
 -- AUTO_INCREMENT cho bảng `db_lienhe`
 --
 ALTER TABLE `db_lienhe`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT cho bảng `db_luu_sp`

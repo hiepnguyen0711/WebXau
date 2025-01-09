@@ -82,11 +82,12 @@ $khieunaimoi = $d->o_fet("select * from #_lienhe where trang_thai = 0 and loai_l
         </div>
 
         <div class="row">
-            <!-- đơn khiếu nại -->
-            <div class="col-lg-6 col-xs-12">
+         
+         
+            <div class="col-lg-12 col-xs-12">
                 <div class="box box-warning">
                     <div class="box-header with-border">
-                        <h3 class="box-title">ĐƠN KHIẾU NẠI</h3>
+                        <h3 class="box-title">Khách hàng Liên hệ</h3>
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                             </button>
@@ -100,108 +101,8 @@ $khieunaimoi = $d->o_fet("select * from #_lienhe where trang_thai = 0 and loai_l
                                     <tr>
                                         <th class="text-center">STT</th>
                                         <th>Tên khách hàng</th>
-                                        <th>Mã vận đơn</th>
-                                        <th>nội dung</th>
-                                        <th>Ngày gửi</th>
-                                        <th class="text-center">Xem</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($khieunaimoi as $key => $value) { ?>
-                                        <tr>
-                                            <td class="text-center"><?= $key + 1 ?></td>
-                                            <td><?= $value['ho_ten'] ?></td>
-                                            <td><?= $value['ma_van_don'] ?></td>
-                                            <td><?= $value['tieu_de'] != '' ? '<b>' . $value['tieu_de'] . ' </b> ' : '' ?><?= catchuoi($value['noi_dung'], 150) ?></td>
-                                            <td class=""><?= $value['ngay_hoi'] ?></td>
-                                            <td class="text-center">
-                                                <a data-toggle="modal" onclick="load_ajax(<?= $value['id'] ?>)" data-target="#myModal" class="btn btn-xs btn-info" href="#" title="Sửa">Chi tiết</a>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.table-responsive -->
-                    </div>
-                    <!-- /.box-body -->
-                    <div class="box-footer clearfix">
-                        <a href="index.php?p=lien-he&a=man" class="btn btn-sm btn-default btn-flat pull-right">Xem tất cả liên hệ</a>
-                    </div>
-                    <!-- /.box-footer -->
-                </div>
-            </div>
-            <!-- đơn khiếu nại end -->
-            <?php if (get_json('cart', 'display')) { ?>
-                <div class="col-lg-6 col-xs-12">
-                    <div class="box box-info">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Đơn đặt hàng mới</h3>
-                            <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                                </button>
-                            </div>
-                        </div>   
-                        <!-- /.box-header -->
-                        <div class="box-body">
-                            <div class="table-responsive">
-                                <table class="table no-margin">
-                                    <thead>
-                                        <tr>
-                                            <th>Mã đơn hàng</th>
-                                            <th>Tên khách hàng</th>
-                                            <th>Trạng thái</th>
-                                            <th>Ngày đặt hàng</th>
-                                            <th>Chi tiết</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php foreach ($donhangmoi as $key => $value) {
-
-                                        ?>
-                                            <tr>
-                                                <td><a href="index.php?p=quan-ly-don-hang&a=edit&id=<?= $value['id'] ?>"><?= $value['ma_dh'] ?></a></td>
-                                                <td><?= $value['ho_ten'] ?></td>
-                                                <td><span class="label label-success">Đơn hàng mới</span></td>
-                                                <td>
-                                                    <?= $value['ngay_dathang'] ?>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="index.php?p=quan-ly-don-hang&a=edit&id=<?= $value['id'] ?>" class="label label-primary"><i class="glyphicon glyphicon-edit"></i> Chi tiết</a>
-                                                </td>
-                                            </tr>
-                                        <?php } ?>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.box-body -->
-                        <div class="box-footer clearfix">
-                            <a href="index.php?p=quan-ly-don-hang&a=man" class="btn btn-sm btn-default btn-flat pull-right">Xem tất cả đơn hàng</a>
-                        </div>
-                        <!-- /.box-footer -->
-                    </div>
-                </div>
-            <?php } ?>
-            <div class="col-lg-6 col-xs-12">
-                <div class="box box-warning">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Khách hàng Đặt lịch/Liên hệ</h3>
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <div class="table-responsive">
-                            <table class="table no-margin">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">STT</th>
-                                        <th>Tên khách hàng</th>
+                                        <th>SĐT</th>
+                                        <th>Địa chỉ</th>
                                         <th>nội dung</th>
                                         <th>Ngày gửi</th>
                                         <th class="text-center">Xem</th>
@@ -212,7 +113,9 @@ $khieunaimoi = $d->o_fet("select * from #_lienhe where trang_thai = 0 and loai_l
                                         <tr>
                                             <td class="text-center"><?= $key + 1 ?></td>
                                             <td><?= $value['ho_ten'] ?></td>
-                                            <td><?= $value['tieu_de'] != '' ? '<b>' . $value['tieu_de'] . ' </b> ' : '' ?><?= catchuoi($value['noi_dung'], 150) ?></td>
+                                            <td><?= $value['sdt'] ?></td>
+                                            <td><?= $value['dia_chi'] ?></td>
+                                            <td><?= $value['tieu_de'] != '' ? '<b>' . $value['tieu_de'] . ' </b> ' : '' ?><?= catchuoi($value['chuong_trinh_km'], 150) ?></td>
                                             <td class=""><?= $value['ngay_hoi'] ?></td>
                                             <td class="text-center">
                                                 <a data-toggle="modal" onclick="load_ajax(<?= $value['id'] ?>)" data-target="#myModal" class="btn btn-xs btn-info" href="#" title="Sửa">Chi tiết</a>

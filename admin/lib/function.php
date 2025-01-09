@@ -827,4 +827,12 @@ function checkParentCate($parent)
         return $parent;
     }
 }
+
+
+function KiemTraLoi()
+{
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+}
 define("LANG",  get_json('lang', '0', 'code'));

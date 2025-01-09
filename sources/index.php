@@ -29,6 +29,9 @@ $banner_12 = $d->getContent(1106);
 $banner_dang_ky_uu_dai = $d->getContent(1107);
 $nut_nhan_ngay = $d->getContent(1108);
 $chuong_trinh_khuyen_mai = $d->getContents(1109);
+$binh_luan_ao_list = $d->getContents(1115);
+$logo_footer = $d->getContent(1123);
+
 ?>
 
 <!DOCTYPE html>
@@ -2765,7 +2768,7 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
         }
 
         #IMAGE42>.ladi-image>.ladi-image-background {
-            background-image: url("https://w.ladicdn.com/s350x350/5ea845b95da1a2557f302daa/layer-2-20240517014408-geve5.png");
+            background-image: url("<?= Img($binh_luan_ao_list[0]['hinh_anh']) ?>");
         }
 
         #BOX2 {
@@ -2841,7 +2844,7 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
         }
 
         #IMAGE43>.ladi-image>.ladi-image-background {
-            background-image: url("https://w.ladicdn.com/s350x350/5ea845b95da1a2557f302daa/layer-3-20240517014408-qetk2.png");
+            background-image: url("<?= Img($binh_luan_ao_list[1]['hinh_anh']) ?>");
         }
 
         #GROUP9 {
@@ -3042,7 +3045,7 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
         }
 
         #IMAGE47>.ladi-image>.ladi-image-background {
-            background-image: url("https://w.ladicdn.com/s350x350/5ea845b95da1a2557f302daa/layer-4-20240517014408-odl-c.png");
+            background-image: url("<?= Img($binh_luan_ao_list[2]['hinh_anh']) ?>");
         }
 
         #IMAGE50,
@@ -3145,7 +3148,7 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
         }
 
         #IMAGE55>.ladi-image>.ladi-image-background {
-            background-image: url("https://w.ladicdn.com/s350x350/5ea845b95da1a2557f302daa/layer-1-20240517014408-kgxsh.png");
+            background-image: url("<?= Img($binh_luan_ao_list[5]['hinh_anh']) ?>");
         }
 
         #IMAGE55>.ladi-image {
@@ -3256,7 +3259,7 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
         }
 
         #IMAGE58>.ladi-image>.ladi-image-background {
-            background-image: url("https://w.ladicdn.com/s350x350/5ea845b95da1a2557f302daa/layer-6-20240517014408-xgfev.png");
+            background-image: url("<?= Img($binh_luan_ao_list[4]['hinh_anh']) ?>");
         }
 
         #HEADLINE69 {
@@ -3277,7 +3280,7 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
         }
 
         #IMAGE59>.ladi-image>.ladi-image-background {
-            background-image: url("https://w.ladicdn.com/s350x350/5ea845b95da1a2557f302daa/layer-5-20240517014408-fjfqq.png");
+            background-image: url("<?= Img($binh_luan_ao_list[3]['hinh_anh']) ?>");
         }
 
         #HEADLINE70 {
@@ -3360,7 +3363,8 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
         }
 
         #IMAGE39>.ladi-image>.ladi-image-background {
-            background-image: url("https://w.ladicdn.com/s400x400/61b976d64622180014834a72/estee-lauder-logo-500x183-20240516092259-ry_0x.jpg");
+            background-image: url("<?= Img($logo_footer['hinh_anh']) ?>");
+            background-size: contain;
         }
 
         #HTML_CODE1 {
@@ -3707,7 +3711,8 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
             <div class='ladi-section-background'></div>
             <div class="ladi-container">
                 <div id="FORM2" data-config-id="6646c9d46728d800127bda20" class='ladi-element'>
-                    <form autocomplete="off" method="post" class='ladi-form'>
+                    <form autocomplete="off" action="" method="post" class='ladi-form form-gui-thong-tin'>
+                        <input type="hidden" name="pnvn_token" value="<?= $_SESSION['token'] ?>">
                         <div id="BUTTON2" class='ladi-element'>
                             <div class='ladi-button ladi-transition'>
                                 <div class="ladi-button-background"></div>
@@ -3743,7 +3748,10 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
                                         foreach ($chuong_trinh_khuyen_mai as $key => $v) {
                                         ?>
                                             <!-- item start -->
-                                            <div class="ladi-form-checkbox-item"><input tabindex="3" name="form_item<?= $key ?>" type="checkbox" value="<?= $v['ten'] ?>" /><span data-checked="false"><?= $v['ten'] ?></span></div>
+                                            <div class="ladi-form-checkbox-item">
+                                                <input tabindex="3" name="chuong_trinh_km[]" type="checkbox" value="<?= $v['ten'] ?>" />
+                                                <span data-checked="false"><?= $v['ten'] ?></span>
+                                            </div>
                                             <!-- item end -->
                                         <?php } ?>
                                     </div>
@@ -3771,7 +3779,7 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
                         <div class="ladi-form-item-background"></div>
                         <div class='ladi-form-item'><input autocomplete="off" tabindex="4" name="dia_chi" required class="ladi-form-control" type="text" placeholder="Địa chỉ" value="" /></div>
                     </div>
-                </div><button type="submit" class="ladi-hidden"></button></form>
+                </div><button type="button" class="ladi-hidden"></button></form>
             </div>
         </div>
     </div>
@@ -3820,6 +3828,8 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
                     </div>
                 </div>
             </div>
+            <!-- khách hàng -->
+
             <div id="IMAGE42" class='ladi-element'>
                 <div class='ladi-image ladi-transition'>
                     <div class="ladi-image-background"></div>
@@ -3829,10 +3839,10 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
                 <div class='ladi-box ladi-transition'></div>
             </div>
             <div id="HEADLINE8" class='ladi-element'>
-                <h3 class='ladi-headline ladi-transition'>Nhã Phạm</h3>
+                <h3 class='ladi-headline ladi-transition'><?= $binh_luan_ao_list[0]['ten'] ?></h3>
             </div>
             <div id="HEADLINE9" class='ladi-element'>
-                <h3 class='ladi-headline ladi-transition'>Dùng bộ này nhà Estee Lauder cả năm nay rồi, da lúc nào cũng căng bóng không thấy xuất hiện nếp nhăn nữa, U40 mà ra đường ai cũng bảo trẻ như sinh viên vậy<br></h3>
+                <h3 class='ladi-headline ladi-transition'><?= $binh_luan_ao_list[0]['noi_dung'] ?><br></h3>
             </div>
             <div id="GROUP7" class='ladi-element'>
                 <div class='ladi-group'>
@@ -3866,10 +3876,10 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
                                 <div class='ladi-box ladi-transition'></div>
                             </div>
                             <div id="HEADLINE15" class='ladi-element'>
-                                <h3 class='ladi-headline ladi-transition'>Phương Thúy</h3>
+                                <h3 class='ladi-headline ladi-transition'><?= $binh_luan_ao_list[1]['ten'] ?></h3>
                             </div>
                             <div id="HEADLINE16" class='ladi-element'>
-                                <h3 class='ladi-headline ladi-transition'>Mua tặng mẹ chồng 1 bộ mà bà mới dùng 2 hôm thích quá đi khoe cả xóm, giờ mấy cô hàng xóm cũng nhờ mua hộ luôn&nbsp;<br></h3>
+                                <h3 class='ladi-headline ladi-transition'><?= $binh_luan_ao_list[1]['noi_dung'] ?>&nbsp;<br></h3>
                             </div>
                         </div>
                     </div>
@@ -3953,11 +3963,12 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
                     </div>
                 </div>
             </div>
+            
             <div id="BOX7" class='ladi-element'>
                 <div class='ladi-box ladi-transition'></div>
             </div>
             <div id="HEADLINE55" class='ladi-element'>
-                <h3 class='ladi-headline ladi-transition'>Mình mới nhận về tay luôn nè, đóng gói cẩn thận, check hàng chính hãng yên tâm, mà mua đúng đợt sale giá hời thích lắm luôn&nbsp;<br></h3>
+                <h3 class='ladi-headline ladi-transition'><?= $binh_luan_ao_list[5]['noi_dung'] ?>&nbsp;<br></h3>
             </div>
             <div id="IMAGE55" class='ladi-element'>
                 <div class='ladi-image ladi-transition'>
@@ -3965,7 +3976,7 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
                 </div>
             </div>
             <div id="HEADLINE56" class='ladi-element'>
-                <h3 class='ladi-headline ladi-transition'>Anna Lê</h3>
+                <h3 class='ladi-headline ladi-transition'><?= $binh_luan_ao_list[5]['ten'] ?></h3>
             </div>
             <div id="IMAGE56" class='ladi-element'>
                 <div class='ladi-image'>
@@ -3978,10 +3989,10 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
                         <div class='ladi-box ladi-transition'></div>
                     </div>
                     <div id="HEADLINE57" class='ladi-element'>
-                        <h3 class='ladi-headline ladi-transition'>Hạ Nam</h3>
+                        <h3 class='ladi-headline ladi-transition'><?= $binh_luan_ao_list[2]['ten'] ?></h3>
                     </div>
                     <div id="HEADLINE58" class='ladi-element'>
-                        <h3 class='ladi-headline ladi-transition'>Mới dùng được hơn tuần mà da căng bóng mịn mượt, sáng hơn hẳn. Serum và kem đều thấm cực nhanh, thoa xong sáng hôm sau dậy thấy da khác hẳn rồi ấy<br></h3>
+                        <h3 class='ladi-headline ladi-transition'><?= $binh_luan_ao_list[2]['noi_dung'] ?><br></h3>
                     </div>
                     <div id="GROUP24" class='ladi-element'>
                         <div class='ladi-group'>
@@ -4010,10 +4021,10 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
                         <div class='ladi-box ladi-transition'></div>
                     </div>
                     <div id="HEADLINE67" class='ladi-element'>
-                        <h3 class='ladi-headline ladi-transition'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;T đã quất hẳn 1 bộ trước khi m tag rồi vì giá đang rẻ quá trời =)))</h3>
+                        <h3 class='ladi-headline ladi-transition'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<?= $binh_luan_ao_list[4]['noi_dung'] ?></h3>
                     </div>
                     <div id="HEADLINE68" class='ladi-element'>
-                        <h2 class='ladi-headline ladi-transition'>@Ngọc Trinh</h2>
+                        <h2 class='ladi-headline ladi-transition'><?= $binh_luan_ao_list[4]['chucvu'] ?></h2>
                     </div>
                     <div id="LINE2" class='ladi-element'>
                         <div class='ladi-line'>
@@ -4026,7 +4037,7 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
                         </div>
                     </div>
                     <div id="HEADLINE69" class='ladi-element'>
-                        <h3 class='ladi-headline ladi-transition'>Diễm</h3>
+                        <h3 class='ladi-headline ladi-transition'><?= $binh_luan_ao_list[4]['ten'] ?></h3>
                     </div>
                     <div id="GROUP26" class='ladi-element'>
                         <div class='ladi-group'>
@@ -4039,10 +4050,10 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
                                 </div>
                             </div>
                             <div id="HEADLINE70" class='ladi-element'>
-                                <h3 class='ladi-headline ladi-transition'>Ngọc Trinh</h3>
+                                <h3 class='ladi-headline ladi-transition'><?= $binh_luan_ao_list[3]['ten'] ?></h3>
                             </div>
                             <div id="HEADLINE71" class='ladi-element'>
-                                <h3 class='ladi-headline ladi-transition'>Da sạm với bị nhăn khoé mắt nhiều mua bộ này này, chị t đang dùng ổn lắm đó<br></h3>
+                                <h3 class='ladi-headline ladi-transition'><?= $binh_luan_ao_list[3]['noi_dung'] ?><br></h3>
                             </div>
                             <div id="GROUP27" class='ladi-element'>
                                 <div class='ladi-group'>
@@ -4104,7 +4115,10 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
         <div class='ladi-section-background'></div>
         <div class="ladi-container">
             <div id="HEADLINE3" class='ladi-element'>
-                <h2 class='ladi-headline'>Công Ty TNHH Estée Lauder (Việt Nam)<br>© Estée Lauder Inc<br>Đại lý ủy quyền của Công ty ESTEE LAUDER<br></h2>
+                <?php
+                $ten_cong_ty_footer = $d->getContent(1122);
+                ?>
+                <h2 class='ladi-headline'><?= $ten_cong_ty_footer['noi_dung'] ?></h2>
             </div>
             <div id="IMAGE39" class='ladi-element'>
                 <div class='ladi-image'>
@@ -4119,6 +4133,78 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
         </div>
     </div>
     </div>
+
+    <!-- script gửi form start -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.querySelector(".form-gui-thong-tin");
+
+            if (form) {
+                form.addEventListener("submit", function(e) {
+                    e.preventDefault(); // Ngăn chặn hành vi mặc định của form
+
+                    // Thu thập dữ liệu từ form
+                    const token = form.querySelector('input[name="pnvn_token"]').value;
+                    const ho_ten = form.querySelector('input[name="ho_ten"]').value.trim();
+                    const dien_thoai = form.querySelector('input[name="dien_thoai"]').value.trim();
+                    const dia_chi = form.querySelector('input[name="dia_chi"]').value.trim();
+                    const chuong_trinh_km = Array.from(
+                        form.querySelectorAll('input[name="chuong_trinh_km[]"]:checked')
+                    ).map((checkbox) => checkbox.value);
+
+                    // Kiểm tra dữ liệu hợp lệ
+                    if (!ho_ten || !dien_thoai || !dia_chi) {
+                        alert("Vui lòng nhập đầy đủ thông tin!");
+                        return;
+                    }
+
+                    if (chuong_trinh_km.length === 0) {
+                        alert("Vui lòng chọn ít nhất một chương trình khuyến mãi!");
+                        return;
+                    }
+
+                    // Gửi dữ liệu qua AJAX
+                    const formData = {
+                        pnvn_token: token,
+                        ho_ten: ho_ten,
+                        dien_thoai: dien_thoai,
+                        dia_chi: dia_chi,
+                        chuong_trinh_km: chuong_trinh_km,
+                    };
+
+                    fetch("sources/ajax/gui-thong-tin.php", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify(formData),
+                        })
+                        .then((response) => response.json())
+                        .then((data) => {
+                            if (data.status == "success") {
+                                Swal.fire({
+                                    icon: "success",
+                                    title: "Bạn đã gửi thông tin thành công",
+                                    position: "center",
+                                    showConfirmButton: true,
+                                    timer: 2000,
+                                    timerProgressBar: true,
+                                });
+                                form.reset();
+                            } else {
+                                // alert("Đã xảy ra lỗi: " + data.message);
+                            }
+                        })
+                        .catch((error) => {
+                            console.error("Error:", error);
+                            alert("Đã xảy ra lỗi trong quá trình gửi thông tin.");
+                        });
+                });
+            }
+        });
+    </script>
+    <!-- script gửi form end -->
+
     <div id="backdrop-popup" class="backdrop-popup"></div>
     <div id="backdrop-dropbox" class="backdrop-dropbox"></div>
     <div id="lightbox-screen" class="lightbox-screen"></div>
@@ -4378,7 +4464,7 @@ $chuong_trinh_khuyen_mai = $d->getContents(1109);
                 "C": "0.4s"
             },
             "FORM2": {
-                "option.dynamic_form_config": "&#123;&#34;configs&#34;:[],&#34;default_actions&#34;:[&#123;&#34;redirect_url&#34;:&#34;http://www.esteelauder-us.com/thankiu&#34;,&#34;type&#34;:&#34;form_redirect_url&#34;,&#34;no_delete&#34;:true&#125;]&#125;",
+                "option.dynamic_form_config": "&#123;&#34;configs&#34;:[],&#34;default_actions&#34;:[&#123;&#34;redirect_url&#34;:&#34;&#34;,&#34;type&#34;:&#34;form_redirect_url&#34;,&#34;no_delete&#34;:true&#125;]&#125;",
                 "a": "form",
                 "bP": "6646c9d46728d800127bda20",
                 "bM": true,

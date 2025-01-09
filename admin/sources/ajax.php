@@ -356,6 +356,12 @@ if ($do == 'xoa_anh_sp') {
                 <td><?= $row['noi_dung'] ?></td>
             </tr>
         <?php } ?>
+        <?php if ($row['chuong_trinh_km']) { ?>
+            <tr>
+                <td style="width: 90px;font-weight: bold;">Khách lựa chọn:</td>
+                <td><?= $row['chuong_trinh_km'] ?></td>
+            </tr>
+        <?php } ?>
     </table>
 <?php
 } elseif ($do == 'add_sl') {
